@@ -48,7 +48,7 @@
 ## Work 
 - todat 
     - [x] train models 
-    - [ ] account scicore (maybe re-check with Anna's documentary)
+    - [x] account scicore (maybe re-check with Anna's documentary)
 
 
 
@@ -80,5 +80,18 @@
         - breath_aid more predictive than cal_value (but not sure about causal relation)
 
 ## Next steps
-- [ ] prepare some slides
+- [x] prepare some slides
+- [x] ask Ece about scicore 
+- [x] read BiomedIT training
+
+
+# 07.10.2025
+## Work
+- meeting 
+- fighting with scicore 
+- neonates project
+
+## Next steps
 - [ ] read into masked autoencoders 
+- [ ] make project for regensburg clinicians
+- [ ] make presentation defense
