@@ -157,9 +157,8 @@
     - MIDL: 01.12.2025 (paper registration) / 05.12.2025 (paper submission) (Taipei)
     - NeurIPS: probably May 2026 
     - ICML: probably End of January (Seoul, Korea)
-    - ICLR: (Rio de Janeiro) -> already past
     - ECCV: 6 March 2026 (Malmoe)
-    - CVPR: 06/12. November (Denver)
+    - CVPR: 06/12. November 2025 (Denver)
 
 - Idea for Sergio
     - 
@@ -199,13 +198,87 @@
 
 
 
-# 14.10.2025
+# 15.10.2025
 ## Work 
 - neonates project
     - implementing EOS calculator in python
 
+- specific project collection
+
+
+- defense making
+
+- grouop meeting 
+    - read entry on how to supervise from WIKI
+    - Think about workshop ideas
+    - @Paul: organize research updates
+    - Lab social next wednesday
+
+- Scientific talk Simon
+    - [x] look up what CLS is 
+    - [x] look into MAEs 
+
+
+
+- TODOs today
+    - [x] meeting slides Neonates
+    - [x] meeting slides MSc project
+
 ## Next steps
-- [ ] neonates implement other 
+- [x] neonates implement other 
+
+
+
+# 16.10.2025
+## Work 
+- meeting Sabrina 
+- meering MSc student Hareeswara
+- cleaning up neonates project 
+- collecting project ideas
+- making some more slides for my defense 
+
+## Next steps
+
+
+
+# 17.10.2025
+## Work 
+- read paper on uncertainty for distribution shifts
+
+- neonates project
+
+### Paper: Yuli / Blei: Quantifying uncertainty in the presence of distribution shifts
+- key idea: learn adaptive prior that is dependent on new, unseen input
+
+- to look up
+    - [x] amortized variational inference
+    - [ ] check papers on age bias from related work
+
+- related work
+    - https://arxiv.org/pdf/2510.10947
+
+### My project idea
+- General question: provide good uncertainties for adults and children in dataset
+- approach: treat them as covariate shifts (like in the paper)
+- also make OOD detection for either children or subgroups of children etc. 
+- compare calibration between this approach and maybe my own one
+- in general leads to more trustworthy uncertainties and predictions
+- use this method to adjust phiseg such that it captures 
+
+- ML task: 
+    - segmentation 
+- potential datasets
+    - 
+
+- steps to do in this project
+    1. replicate the paper
+    2. adjust our method (phiseg) for this
+    3. evaluate on segmentations for adults and children (and it's uncertainty)
+
+
+
+## Next steps
+- [ ] look into self-supervised learning
 - [ ] make presentation defense
 - stuff to look up
     - [ ] self-attention
@@ -228,3 +301,5 @@
     - [ ] https://hidivelab.org/publications/lange-2025-dqvis/ interactive biomedical data visualization dataset
     - [ ] https://arxiv.org/abs/2505.18636 new way of UQ for large language models (with sidekick models)
     - [ ] https://arxiv.org/pdf/2506.19083 decisions under uncertainty
+
+- [ ] Project idea: hierarchical MAEs

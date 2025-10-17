@@ -65,3 +65,61 @@
 ## My topics for next meeting
 - classification performance for ML approach in general 
 - cannot compare EOS calculator directly with our approach because of missing / different features
+
+
+# 15.10.2025
+## Work 
+- features selected for classification: 
+    - birth_weight
+    - gest_weeks + gest_days (-> made to one gest_time)
+    - age_mother
+    - gravidity
+    - parity
+    - birth_mode (one-hot encoding)
+    - umbilical_cord_ph
+    - capillary_time
+    - o2_demand
+    - breath_aid
+    - heart_rate
+    - respiration_rate
+    - rr_systolic
+    - rr_diastolic
+    - base_excess
+    - ph_value
+    - diabetes_type_1_2
+    - adiposity
+    - early_membrane_rupture
+    - membrane_rupture_hours (put 0 in case missing)
+    - early_labor_pain
+    - green_amniotic_liquor
+    - b_streptococcus
+    - crp_max_prepartal
+    - leukocyte_max_prepartal
+    - fever_sub_partu
+    - antibiotics_prepartal
+    - prepartal_antibiotics_count
+    - biomarkers: only from time 1
+
+
+- label: diagnosis_infection
+
+# 16.10.2025
+## Meeting Sabrina
+
+### General 
+- the previous dataset was not correct with the calprotectin (some values have been mixed up regarding the time point)
+- there are two/three goals that we might need to do with machine learning 
+    1. Infection right after birth -> yes/no? 
+        - for this we mainly look at time stamps at time zero
+        - look at all clinical parameters that we have and maybe also calprotectin
+    2. If antibiotics were given, test after 24 or 48 hours based on clinical parameters (and calprotectin) whether we can predict even better
+        - important to stop as soon as possible with treatment
+
+    3. Detect ideal window for calprotectin to be predictive
+
+
+
+### New TODOs until next time
+- [ ] include WBC in analysis as biomarker
+- [ ] maybe look at infants from only > 34 weeks (this is roughly the cutoff for when immune system works differently)
+- [ ] include SHAP for XGBoost in analysis for explainability 
