@@ -120,6 +120,46 @@
 
 
 ### New TODOs until next time
-- [ ] include WBC in analysis as biomarker
+- [x] include WBC in analysis as biomarker
 - [ ] maybe look at infants from only > 34 weeks (this is roughly the cutoff for when immune system works differently)
 - [ ] include SHAP for XGBoost in analysis for explainability 
+
+
+# 17.10.2025
+## Work
+- clean new dataset 
+    - the features I have selected: ['birth_weight', 'gest_weeks', 'gest_days',
+       'age_mother', 'gravidity', 'parity', 'umbilical_cord_ph',
+       'capillary_time', 'o2_demand', 'breath_aid', 'heart_rate',
+       'respiration_rate', 'rr_systolic', 'rr_diastolic', 'base_excess', 'diagnosis_infection', 'gestation_diabetes',
+       'diabetes_type_1_2', 'adiposity', 'early_membrane_rupture',
+       'membrane_rupture_hours', 'early_labor_pain', 'green_amniotic_liquor',
+       'b_streptococcus', 'fever_sub_partu', 'antibiotics_prepartal', 'SCP1', 'CRP1', 'IL61', 'WBC1']
+
+- preprocessing:
+    - select only relevant features 
+    - impute membrane rupture hours (lots of null values)
+    - drop null values
+    - compute total gest time
+
+- new amount of data I have left after cleaning: 273
+
+- tsne visualization
+
+- save into train, test, eval split
+
+- new classification results (AUC)
+    1. all features
+        - LR: 0.7869
+        - XGBoost: 0.9391
+    2. Only clinical
+        - LR: 0.6971
+        - XGBoost: 0.7123
+    3. Only biomarkers
+        - LR: 0.7500
+        - XGBoost: 0.8173
+    4. Clinical + calprotectin
+        - LR: 0.7019
+        - XGBoost: 0.7147
+
+- feature importance see notebook exp011
