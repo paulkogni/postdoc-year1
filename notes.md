@@ -503,6 +503,25 @@ The review dismisses a substantial portion of our results section, which is dedi
 **These points raised by Reviewer 2 are also incorrect.** We explicitly report runtime benchmarks in Section 4.2, stating the time per pipeline iteration and the hardware used. The chosen downstream tasks (cartilage volume and ejection fraction computation) are of high diagnostic relevance, as motivated in Sections 3.4.1 and 3.4.2. Our framework's value is in achieving a user-defined, clinically acceptable precision for these metrics in the shortest possible time for each individual patient.
 
 
+#### other potential journals to send it to
+- https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics
+- https://onlinelibrary.wiley.com/journal/15222594
+- https://www.sciencedirect.com/journal/computers-in-biology-and-medicine
+- https://www.embs.org/tbme/
+- https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
+
+
+## Next steps
+
+
+
+# 24.10.2025
+## Work 
+- finish reviews
+- make slides for defense
+- make slides for research update
+- look into neonates project
+
 ## Next steps
 - [ ] look into self-supervised learning
 - [ ] make presentation defense

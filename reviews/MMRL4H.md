@@ -88,31 +88,37 @@
 
 1. Please provide a brief summary and your overall opinion of the paper
 - goal of the work is to use multi-modal remote patient data to predict critical events for patients undergoing cancer therapy
-- the authors use a transformer-based architecture TODO
+- the authors use a transformer-based architecture to that incorporates information coming from wearable sensors, questionaires and clinical events
+- moreover, the authors showcase how to deal with real world challenges such as data not-missing at random or asynchronous data
+- also their protocol for a standardized multi-modal data collection for patients undergoing cancer therapy seems valuable
+- the manuscript has some minor shortcomings such as typos and the experiments were performed on a comparably small amount of subjects
+- overall, the paper has a valid contribution within the scope of the workshop
 
 2. What are the main strengths of the paper?
-
+- clear and valuable contribution for remote patient monitoring 
+- valuable demonstration of multi-modal models with real-world challenges 
 
 3. What are the main weaknesses of the paper?
-
+- minor typos (line 45 figure -> Figure; line 68 MNAR/MANR)
+- small amount of subjects
 
 4. Please provide detailed and constructive feedback for the authors to improve their manuscript
-
+- the abstract can be improved by taking care of the typos, otherwise already very nice
 
 5. How would you rate the clarity of this submission?
-
+- good
 
 6. How would you rate the novelty of this submission?
-
+- good
 
 7. What is your general recommendation for this submission?
-
+- accept
 
 8. Please justify your recommendation. What were the major factors that led you to this overall score for the submission?
-
+- valuable contribution within the scope of the workshop
 
 9. Please rate your level of expertise on the discussed topic
-
+- okay
 
 10. Please provide any further comment to the organisation committee that was not captured by the previous questions
 
