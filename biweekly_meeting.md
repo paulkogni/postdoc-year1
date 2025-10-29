@@ -15,7 +15,7 @@
     - combine MAEs with concept learning 
 
 ## New TODOs
-- [ ] write Daniela about meeting 
+- [x] write Daniela about meeting 
 - [ ] figure out scicore pricing (what approach is best)
 - [ ] make sure Max and Simon upload their PhD plan until end of January
 - [x] check Basel MH 

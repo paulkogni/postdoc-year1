@@ -121,8 +121,8 @@
 
 ### New TODOs until next time
 - [x] include WBC in analysis as biomarker
-- [ ] maybe look at infants from only > 34 weeks (this is roughly the cutoff for when immune system works differently)
-- [ ] include SHAP for XGBoost in analysis for explainability 
+- [x] maybe look at infants from only > 34 weeks (this is roughly the cutoff for when immune system works differently)
+- [x] include SHAP for XGBoost in analysis for explainability 
 
 
 # 17.10.2025
@@ -163,3 +163,24 @@
         - XGBoost: 0.7147
 
 - feature importance see notebook exp011
+
+
+# 28.10.2025
+## Work 
+- make grid search on parameters for XGBoost
+
+- include SHAP for XGBoost (take individual example patients)
+
+- looked at data distributions (after filtering out)
+
+- my questions about features
+    - respiration_rate: one with 175
+        - typo?
+    - membrane_rupture_hours: 1848 hours (77 days), 1176
+        - maybe minutes and not converted? 
+    - CRP1: 
+        - what's with all the 0.99980003? 
+        - one is 60, normal? 
+    - IL61: 
+        - what's with 9.999800?
+        - extremely high values, e.g. 37000?
