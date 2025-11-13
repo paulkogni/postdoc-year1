@@ -561,11 +561,136 @@ The review dismisses a substantial portion of our results section, which is dedi
 
 ## Next steps
 - [x] look into self-supervised learning
-- [ ] make presentation defense
 
 - stuff to look up
     - [x] self-attention
     - [x] transformer for segmentation
+
+
+
+
+
+# 04.11.2025
+## Work
+- plans uncertainty project
+    - [x] check out EFR computation that Ece has sent
+    - [x] make data preprocessing 
+    - [x] check out Julia's github whether she published
+        - nothing published yet but spam those repositories
+        - https://github.com/orgs/blei-lab/repositories
+        - https://github.com/yuliSl
+    - [ ] try and use chatti for the implementation of the paper 
+
+
+## Next steps
+
+
+
+# 07.11.2025
+## Work 
+- meeting lecture 
+
+- meeting Lisa 
+
+- neonates evaluation 
+
+
+### Rebuttal plan 
+- new experiments for reviewer #1
+    - add an additional model that was trained on all acc. factors simultaneously and compare it against all other showed models 
+        - will be additional two lines in Figure 2 (one for SKM-TEA and one for CINE)
+        - we will compare only reconstruction and segmentation performance and show with this how using this approach is not necessary and using one model per acc. factor increases performance over-all 
+    - Data consistency 
+        - I wouldn't like to re-do all the experiments, especially since in this framework data consistency is not easily integrateable and I don't even know whether differentiable by default (due to sampling - replacement mismatches)
+        - also I tried it out in the past to insert a simple DC layer and it was absolutely not straight forward and didn't really work
+    - computation with diffusion model, one forward pass for time comparison to justify the choice of model
+        - but also explain why it doesn't matter too much because of modularity 
+        - maybe Nikolas has numbers from his papers for SKM-TEA that we could use to back it up
+
+- For reviewer #2
+    - no additional experiments
+
+    
+- write differently:
+    - maybe justification of the models and methods more detailed 
+    - more detailed explanation for our pipeline approach instead of end-to-end 
+    - reviewer #1 asked for a more detailed explanation on the calibration procedure but I don't really know how to address this (maybe code release is enough?)
+    - Further clarify why we used a pipeline approach and not end-to-end
+    
+
+
+## Next steps
+- week goals
+    - [x] finish neonate algorithm prototypes 
+    - [x] make plan for rebuttal (my paper)
+
+- [x] make neonates new algorithms classification
+ 
+
+
+- [x] Project idea: hierarchical MAEs 
+    - already exists
+
+
+# 12.11.2025
+## Work
+- meeting UKBB for data transferation
+    - photo data (sonographs) is on PACS 
+    - need to check at some point on annotations 
+    - could be that we don't get the written reports due to privacy concerns
+    - person who knows which data we are allowed to use: Lukas Fischer
+    - one potential project that we already know where they have done some data transfer: Humerus fractures research (exported x-rays)
+
+- finish neonates presentation
+
+- echonet dynamic preprocessing
+    - the structure I wanna have: 
+        - one directory with three sub-folders: train, val, test
+        - in each folder, I have one h5 file per subject
+        - one h5 file has the following structure 
+            - 'ed', 'es', 'efr'
+                - 'image', 'segm', 'frame_num'
+
+- challenges in the echonet dataset preprocessing 
+    - some have errors in tracings (more than 21 coordinates, cannot use those for segmentations)
+    - some have odd shape (not 112,112) and these don't have any tracings -> also discard those
+    - for some, my impainting method does not work (opencv) and I need to exclude those as well; only a few compared to total
+    - need to adjust the preprocessing script accordingly such that we exclude these cases. Otherwise we 
+
+## Next steps
+
+
+# 13.11.2025
+## Work 
+- finished echonet dynamic preprocessing 
+    - couldn't use 781 files due to: missingness of tracings, faulty tracings
+
+- preprocessing for echonet pediatric 
+    - [ ] adjust binary mask computation
+    - [ ] the rest should be actually pretty similar to echonet dynamic
+    - structure
+        - ed, es, efr (computed)
+            - image
+            - mask 
+            - frame
+    
+    
+
+## Next steps
+- week goals
+    - [x] finish dataset preprocessing for uncertainty project 
+        - [x] echonet dynamic
+            - [ ] see whether we need to shift by one
+        - [x] echonet pediatric
+    - [x] make plan for rebuttal (my paper)
+    - [ ] have first training running with simple U-Net architecture
+    - [ ] make presentation for daniela meeting 
+    - [ ] have first draft of my defense
+    - [ ] Nikolas feedback
+    - [x] make data training 
+        - https://adam.unibas.ch/goto.php?target=crs_1940159_rcodeKn6Wnxsumc&client_id=adam
+    - [ ] apply for microsoft fellowship
+        - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
 
 
 - look into (neurips)
@@ -578,5 +703,3 @@ The review dismisses a substantial portion of our results section, which is dedi
     - [ ] https://hidivelab.org/publications/lange-2025-dqvis/ interactive biomedical data visualization dataset
     - [ ] https://arxiv.org/abs/2505.18636 new way of UQ for large language models (with sidekick models)
     - [ ] https://arxiv.org/pdf/2506.19083 decisions under uncertainty
-
-- [ ] Project idea: hierarchical MAEs

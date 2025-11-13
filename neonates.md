@@ -184,3 +184,74 @@
     - IL61: 
         - what's with 9.999800?
         - extremely high values, e.g. 37000?
+
+- Subject IDs for extremely high values
+    - respiration rate 180: CAL-329
+    - high membrane rupture hours: 
+        -   CAL-094	(1176.0)
+        - 	CAL-169	(1848.0)
+        - 	CAL-227	(3192.0)
+        - 	CAL-317	(1008.0)
+    - high IL6 values
+        - CAL-112 (37000.0)
+        - CAL-119 (3690.0)
+        - CAL-126 (16410.0)
+        - CAL-169 (25765.0)
+        - CAL-176 (6520.0)
+
+
+# 30.10.2025
+## Meeting Sabrina 
+
+
+
+
+
+# 04,11.2025
+## Work 
+- next steps to do in the project
+    - [x] convert membrane rupture to binary variable 
+        - < 18h normal, >= 18h problematic (it will mean early rupture)
+        - already in dataset
+    - [x] IL6: leave for now, if doesn't work then do cutoff; maybe do log scale but then values could be too close together
+    - [x] group by dates
+        - first window: 0-18h, group the values together
+        - second window: 18-60h 
+
+
+## New TODOs 
+
+- [x] exclude newborns < 34 weeks 
+    - they could corrupt the data analysis because their immune system works completely different 
+    - biomarkers don't tell anything about infections
+    - should be around 60 kids 
+    - maybe we could do even two different models (one for < 34 and one for > 34 weeks) if enough data
+    - in worst case we have to restrict our model to > 34 hours
+
+
+
+
+
+# 05.11.2025
+## Work 
+- fit classifier for algorithm V1
+    - all features
+    - all features without SCP
+    - all biomarkers 
+    - biomarkers without scp
+    - clinical with scp
+    - only clinical
+
+- fit classifier for algorithm V2
+    - fit classifiers again like on top for second phase 
+    - in test set, look at only the ones that received antibiotics 
+    - check how many of them are incorrect by labels 
+    - check how many of those we would prevent from over-treatment
+
+## Next steps
+- [ ] try out to add additional binary variable early born or not 
+- [x] for AUC experiment: check additionally for biomarkers with and without calprotectin
+- [x] make new distinction for classification: 
+    - merge datapoints within 24h together and then 24h-48h
+    - this will create two new datasets and two new classifiers 
+    - for merging double datapoints of biomarkers: take the first measured one 

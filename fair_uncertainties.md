@@ -35,14 +35,19 @@
 
 
 # Methods to compare against
-
+- normal bayesian NN 
+- SG-RCPS
+- new one 
+- both new and old combined
 
 # Experiments
 - metrics to evaluate
-
+    - dice
+    - expected calibration error
+    - coverage for segmentations (need to check conformal for this) or coverage for efr
 
 # Datasets
 - [x] AMOS 
-- [ ] oediatric CT seg
+- [x] oediatric CT seg
 - [x] echonet
 - [x] echonet pediatrics
