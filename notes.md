@@ -666,33 +666,19 @@ The review dismisses a substantial portion of our results section, which is dedi
     - couldn't use 781 files due to: missingness of tracings, faulty tracings
 
 - preprocessing for echonet pediatric 
-    - [ ] adjust binary mask computation
-    - [ ] the rest should be actually pretty similar to echonet dynamic
+    - [x] adjust binary mask computation
+    - [x] the rest should be actually pretty similar to echonet dynamic
     - structure
         - ed, es, efr (computed)
             - image
             - mask 
             - frame
     
+
+
     
 
 ## Next steps
-- week goals
-    - [x] finish dataset preprocessing for uncertainty project 
-        - [x] echonet dynamic
-            - [ ] see whether we need to shift by one
-        - [x] echonet pediatric
-    - [x] make plan for rebuttal (my paper)
-    - [ ] have first training running with simple U-Net architecture
-    - [ ] make presentation for daniela meeting 
-    - [ ] have first draft of my defense
-    - [ ] Nikolas feedback
-    - [x] make data training 
-        - https://adam.unibas.ch/goto.php?target=crs_1940159_rcodeKn6Wnxsumc&client_id=adam
-    - [ ] apply for microsoft fellowship
-        - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
-
-
 - look into (neurips)
     - [ ] https://torch-uncertainty.github.io/
     - [ ] https://arxiv.org/pdf/2502.06067 (Lipschitz)
@@ -703,3 +689,45 @@ The review dismisses a substantial portion of our results section, which is dedi
     - [ ] https://hidivelab.org/publications/lange-2025-dqvis/ interactive biomedical data visualization dataset
     - [ ] https://arxiv.org/abs/2505.18636 new way of UQ for large language models (with sidekick models)
     - [ ] https://arxiv.org/pdf/2506.19083 decisions under uncertainty
+
+
+# 14.11.2025
+## Work 
+- checked echonet dynamic code base for frame shift
+    - they don't model it at least
+    - code directly reads the frame without shifting it
+    - https://github.com/echonet/dynamic/blob/9ab3a59d068648c609885c5d10bc09285ee7bae7/echonet/datasets/echo.py#L132
+
+- checked echonet pediatric for shift 
+    - looks the same in echonet pediatric to be honest
+        - so what to do?
+    - so the value counts in the normal echonet version in the csv start at 0, but in the pediatric version it starts at 1
+    - for the pediatric dataset, when preprocessing I would say we need to start at 1
+    
+
+- set up dataloader
+    - [x] echonet dyn/ped -> the same file for both
+    - [ ] both at the same time
+
+
+## Next steps
+- week goals
+    - [x] finish dataset preprocessing for uncertainty project 
+        - [x] echonet dynamic
+        - [x] echonet pediatric
+    - [x] make plan for rebuttal (my paper)
+    - [x] have first training running with simple U-Net architecture
+    - [ ] have first draft of my defense
+    - [ ] Nikolas feedback
+    - [x] make data training 
+        - https://adam.unibas.ch/goto.php?target=crs_1940159_rcodeKn6Wnxsumc&client_id=adam
+    
+
+- [ ] set up U-Net framework for network configuration
+    - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
+
+- [ ] apply for microsoft fellowship
+        - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
+        - deadline: 02.12.2025
+
+- [ ] make presentation for daniela meeting 
