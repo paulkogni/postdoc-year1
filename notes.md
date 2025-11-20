@@ -717,17 +717,73 @@ The review dismisses a substantial portion of our results section, which is dedi
         - [x] echonet pediatric
     - [x] make plan for rebuttal (my paper)
     - [x] have first training running with simple U-Net architecture
-    - [ ] have first draft of my defense
-    - [ ] Nikolas feedback
+    - [x] Nikolas feedback
     - [x] make data training 
         - https://adam.unibas.ch/goto.php?target=crs_1940159_rcodeKn6Wnxsumc&client_id=adam
     
+
+
+
+# 19.11.2025
+## Work 
+- proteomics project
+
+- presentations
+
+
+
+## Next steps
+
+
+
+
+# 20.11.2025
+## Work 
+- meeting Sabrina
+
+- meeting Daniela
+
+- admin tasks
+    - website access
+        - [x] reach out to beat fasel
+        - https://dbe.unibas.ch/typo3/module/web/layout
+    - confluence access / group wiki
+        - cannot change ownership under free plan, need to upgrade 
+        - alternative: create new space + copy pages
+    - group files
+        - no specific access -> Sergio sends folders
+    - permissions/access for scicore / biomed IT?
+        - [x] Data manager: maybe we need to submit a form that says I am new data manager or something
+    - github access
+        - done
+    - any overleaf-permissions or group? 
+        - no
+    - any special DBE access? 
+        - no
+    - SwissAI access
+    - what is the ADAM course link in the wiki under "training & data access"?
+    - reimbursement? -> probably Ece
+    - relevant people 
+        - scicore: Pablo / Sofia Georgiakopolou / support 
+        - university infrastructure: Beat Fasel
+        - SwissAI / ETH: Thomas Sutter 
+
+- try running training on scicore
+
+
+
+## Next steps
+- week goals
+    - [ ] have first draft of my defense
+    - [ ] have architecture for my project and trainings running
+    - [x] have presentation for meeting with Daniela
+    - [ ] finish Microsoft fellowship application
+    - [ ] write Kerstin Ritter
+    - [ ] apply for MIDL student board
 
 - [ ] set up U-Net framework for network configuration
     - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
 
 - [ ] apply for microsoft fellowship
         - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
-        - deadline: 02.12.2025
-
-- [ ] make presentation for daniela meeting 
+        - deadline: 02.12.2025  

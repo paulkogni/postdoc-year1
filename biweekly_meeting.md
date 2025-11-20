@@ -40,7 +40,37 @@
 
 
 ## New TODOs 
-- [ ] prepare slides for meeting with daniela 
+- [x] prepare slides for meeting with daniela 
 - uncertainty project
-    - [ ] when evaluating the ejection fraction, we shouldn't compare the ejection fraction with the one provided in the table but compute it ourselves with the simpson method. Otherwise we will have a systematic error!
+- [x] when evaluating the ejection fraction, we shouldn't compare the ejection fraction with the one provided in the table but compute it ourselves with the simpson method. Otherwise we will have a systematic error!
 - [x] check IMPRS-IS for mental health 
+
+
+# 19.11.2025
+## General 
+
+
+## New TODOs 
+- [ ] write Pablo about our resources and how it works with the available allocated stuff
+- [x] write Yuli about her repository 
+- [ ] in my uncertainty paper
+    - [ ] include another baseline for segmentation performance such as medSAM
+    - [ ] for the subgroup analysis: do evaluation on the following age groups
+        - [0-1[: baby
+        - [1-3[: toddler
+        - [3-5[: preschool
+        - [5-12[: gradeschool
+        - [12-18[: teens
+
+## Questions about absense 
+- [ ] what about financial decisions during absense? (i.e. UKBB says they need more money than planned)
+- [ ] reimbursement during absence
+- [ ] Admin
+    - Group wiki (confluence): cannot change owners of space. Options: 
+        - create new space with owner me or you 
+            - problem again: when handing over or that only one person can manage users
+        - paid plan: for 5,42$ per month we can get rid of this problem
+        - we use completely different framework (like github) or host our own internal page on the intranet
+    - changing my role on scicore
+        - either you could do it 
+        - or we have to submit a new form to Sofia(?)
