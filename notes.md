@@ -579,7 +579,6 @@ The review dismisses a substantial portion of our results section, which is dedi
         - nothing published yet but spam those repositories
         - https://github.com/orgs/blei-lab/repositories
         - https://github.com/yuliSl
-    - [ ] try and use chatti for the implementation of the paper 
 
 
 ## Next steps
@@ -774,16 +773,118 @@ The review dismisses a substantial portion of our results section, which is dedi
 
 ## Next steps
 - week goals
-    - [ ] have first draft of my defense
-    - [ ] have architecture for my project and trainings running
+    - [x] have architecture for my project and trainings running
     - [x] have presentation for meeting with Daniela
-    - [ ] finish Microsoft fellowship application
-    - [ ] write Kerstin Ritter
-    - [ ] apply for MIDL student board
+    - [x] finish Microsoft fellowship application
+    - [x] write Kerstin Ritter
+    - [x] apply for MIDL student board
+    - [x] make list of proteomics things
+
+
+
+- [x] apply for microsoft fellowship
+        - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
+        - deadline: 02.12.2025  
+
+
+# 25.11.2025
+## Work 
+- neonates project
+
+- defense 
+    - [x] include slide deck for paper num 4
+    - [x] check structure and compare with what gemini said 
+    - [x] collect figures 
+
+
+- research update slides
+    - neonates
+    - cancer
+    - uncertainty 
+    - UKBB/KiSpi
+    - proteomics for gestational diabetes
+
+
+- TODOs today
+    - [x] JB 
+    - [x] Defense 
+    - [x] write everyone for defense date
+    - [x] Slides update
+    - [x] architecture try
+    - [x] application young researchers
+    - [x] ask sergio about gpu infrastructure meetings
+        - https://docs.google.com/document/d/15daR84BVGLtLxMZfllXeUiIx-wDEDxqeT0gXOT4hkuI/edit?tab=t.0
+
+## Next steps
+
+
+
+# 26.11.2025
+## Work 
+
+## Next steps
+
+
+# 27.11.2025
+## Work 
+- finish slides Daniela
+- finish neonates slides
+- mlcloud stuff
+- for rebuttal
+    - [ ] set up the sftp wizzard in vscode (copy stuff from my working machine)
+    - [ ] write new datalaoder for big trainging 
+        - [ ] skm-tea
+        - [ ] CINE 
+    - [ ] write new training script (expXXX)
+        - [ ] skmtea
+        - [ ] cine
+
+    - training on all acc factors at the same time
+        - [ ] write dataloader for training on all acc. factors at the same time
+            - should be very similar to original dataloader
+            - but instead of one list of files for one acc factor there should be a big list of files with all acc. factors at the same time
+            - OR we randomly sample acc. factor in the get_item function
+            - both, for cine and skmtea
+        - [ ] write evaluation
+            - instead of saving the reconstructions, the evaluation should be done online
+            - this means:
+                1. perform reconstruction -> compute ssim and psnr -> add it to list
+                2. compute segmentation (no need for re-training) -> compute dice -> add it to list
+                3. compute average scores for the acceleration factor
+            - do this on a basis for one acc. factor, all in parallel 
+            - the two datasets in parallel 
+            - should be 16 (2x8) evaluation scripts running at the same time
+
+- internal wiki alternatives
+    - MS sharepoint could be something
+    - Google sites as well 
+    - internally hosted (could be hosted on our internal server)
+        - BookStack 
+
+- the uncertainty project
+    - [ ] first train simple U-Net on different settings and evaluate the performance on adults and children
+    - [ ] ask how to adapt code such that it is for segmentation 
+
+- neonates meeting Sven
+
+- M365 account: Paul.Fischer@unibas.onmicrosoft.com
+
+## Next steps
+- week goals 
+    - [ ] have first draft of my defense 
+    - [ ] have trainings running 
+    - [x] have first results from neonates project + presentation slides
+    - [x] make research update slides
+    - [x] write scicore about old hardware (nvidia titan -> not usable with newer versions of cuda)
+    - [x] write scicore about data manager
+    - [ ] rebuttal
+    - [x] check out solutions for internal wiki
+    - [x] Termin defense
+    - [x] text Suliman
 
 - [ ] set up U-Net framework for network configuration
     - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
 
-- [ ] apply for microsoft fellowship
-        - https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/
-        - deadline: 02.12.2025  
+- [ ] prepare application for funding 
+    - https://www.unibas.ch/en/Research/Individual-Funding/Research-Fund.html
+    - deadline: 01.02.2026

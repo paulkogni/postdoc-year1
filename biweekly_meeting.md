@@ -51,7 +51,7 @@
 
 
 ## New TODOs 
-- [ ] write Pablo about our resources and how it works with the available allocated stuff
+- [x] write Pablo about our resources and how it works with the available allocated stuff
 - [x] write Yuli about her repository 
 - [ ] in my uncertainty paper
     - [ ] include another baseline for segmentation performance such as medSAM
@@ -62,9 +62,12 @@
         - [5-12[: gradeschool
         - [12-18[: teens
 
-## Questions about absense 
+
+
+## Questions for nect meeting  
 - [ ] what about financial decisions during absense? (i.e. UKBB says they need more money than planned)
 - [ ] reimbursement during absence
+- [ ] fine to share ethics documents in case someone needs those? 
 - [ ] Admin
     - Group wiki (confluence): cannot change owners of space. Options: 
         - create new space with owner me or you 
@@ -74,3 +77,6 @@
     - changing my role on scicore
         - either you could do it 
         - or we have to submit a new form to Sofia(?)
+- [ ] Sven asked: possible to publish results already somewhere? 
+    - for medical a bit too little / not too interesting
+    - for ML: no new methods 
