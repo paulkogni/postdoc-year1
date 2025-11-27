@@ -263,6 +263,29 @@
 - what we should do instead is to treat the time of the first measurement as t_0 instead of the birth
 
 ## Next steps
-- [ ] compute the hours of measurement not after brith but after the first measurement (first measurement is t_0)
-- [ ] visualize the features I have taken out of all the available features, probably with a Venn-diagram
+- [x] compute the hours of measurement not after brith but after the first measurement (first measurement is t_0)
+- [x] visualize the features I have taken out of all the available features, probably with a Venn-diagram
+
+
+
+# 27.11.2025, Meeting with Sven
+## General 
+- mothers with normal birth mode have in general higher risk of infection in child
+
+## New TODOs
+- [x] text Sabrina about update 
+- [x] ask Sabrina about CRP and Leucocyte measures for mother 
+- [ ] include birth mode into analysis
+    - everything with C-section should be 1
+    - the rest 0
+- [ ] include capilary time (make it one-hot encoding)
+- [ ] in Alg 2: exclude IL6
+- [ ] check why in Alg 2 there are so many missing values for e.g. CRP
+    - we can check the labels for those that are missing. Should be clear "no infection" label for them
+    - also check the hours after t_0 for the subjects without measurements
+- [ ] make another algorithm version that doesn't contain IL6 (measuring IL6 is expensive!), especially for Algorithm 1
+- [ ] include column "antibiotics therapy" as feature in algorithm 1
+
 - [ ] find a way of how to compare against Kaiser-permanente 
+    - can create maximum and minimum values for likelihood (basically like an uncertainty band)
+    - can use the uncertainty band to then see whether we are still better
