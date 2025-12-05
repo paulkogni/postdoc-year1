@@ -64,11 +64,12 @@
 
 
 
-## Questions for nect meeting  
-- [ ] what about financial decisions during absense? (i.e. UKBB says they need more money than planned)
-- [ ] reimbursement during absence
-- [ ] fine to share ethics documents in case someone needs those? 
-- [ ] Admin
+## Questions for next meeting  
+- [x] what about financial decisions during absense? (i.e. UKBB says they need more money than planned)
+- [x] reimbursement during absence
+- [x] day off next wednesday? 
+- [x] fine to share ethics documents in case someone needs those? 
+- [x] Admin
     - Group wiki (confluence): cannot change owners of space. Options: 
         - create new space with owner me or you 
             - problem again: when handing over or that only one person can manage users
@@ -77,6 +78,18 @@
     - changing my role on scicore
         - either you could do it 
         - or we have to submit a new form to Sofia(?)
-- [ ] Sven asked: possible to publish results already somewhere? 
+- [x] Sven asked: possible to publish results already somewhere? 
     - for medical a bit too little / not too interesting
     - for ML: no new methods 
+
+# 03.12.2025
+## General
+- 
+
+## New TODOs 
+- [ ] send Ece results of developmental performance 
+- [x] write Uni Basel IT support 
+- [ ] potential Journals to submit Neonates paper
+    - Frontiers in pediatrics or Journal of Pediatrics
+
+## Questions for next meeting 

@@ -830,30 +830,7 @@ The review dismisses a substantial portion of our results section, which is dedi
 - finish slides Daniela
 - finish neonates slides
 - mlcloud stuff
-- for rebuttal
-    - [ ] set up the sftp wizzard in vscode (copy stuff from my working machine)
-    - [ ] write new datalaoder for big trainging 
-        - [ ] skm-tea
-        - [ ] CINE 
-    - [ ] write new training script (expXXX)
-        - [ ] skmtea
-        - [ ] cine
 
-    - training on all acc factors at the same time
-        - [ ] write dataloader for training on all acc. factors at the same time
-            - should be very similar to original dataloader
-            - but instead of one list of files for one acc factor there should be a big list of files with all acc. factors at the same time
-            - OR we randomly sample acc. factor in the get_item function
-            - both, for cine and skmtea
-        - [ ] write evaluation
-            - instead of saving the reconstructions, the evaluation should be done online
-            - this means:
-                1. perform reconstruction -> compute ssim and psnr -> add it to list
-                2. compute segmentation (no need for re-training) -> compute dice -> add it to list
-                3. compute average scores for the acceleration factor
-            - do this on a basis for one acc. factor, all in parallel 
-            - the two datasets in parallel 
-            - should be 16 (2x8) evaluation scripts running at the same time
 
 - internal wiki alternatives
     - MS sharepoint could be something
@@ -862,8 +839,8 @@ The review dismisses a substantial portion of our results section, which is dedi
         - BookStack 
 
 - the uncertainty project
-    - [ ] first train simple U-Net on different settings and evaluate the performance on adults and children
-    - [ ] ask how to adapt code such that it is for segmentation 
+    - [x] first train simple U-Net on different settings and evaluate the performance on adults and children
+    - [x] ask how to adapt code such that it is for segmentation 
 
 - neonates meeting Sven
 
@@ -871,17 +848,111 @@ The review dismisses a substantial portion of our results section, which is dedi
 
 ## Next steps
 - week goals 
-    - [ ] have first draft of my defense 
-    - [ ] have trainings running 
     - [x] have first results from neonates project + presentation slides
     - [x] make research update slides
     - [x] write scicore about old hardware (nvidia titan -> not usable with newer versions of cuda)
     - [x] write scicore about data manager
-    - [ ] rebuttal
     - [x] check out solutions for internal wiki
     - [x] Termin defense
     - [x] text Suliman
 
+
+
+
+# 02.12.2025
+## Work 
+- project desription
+
+Title of the project: Ensuring Fair and Rigurous Uncertainty Quantification Among Adults and Children
+Goal: Developing uncertainty quantification methods that are able to indicate the performance gap between adults and children with mathematical guarantees. 
+Timeframe: 2025–ongoing
+Lead researcher(s): Prof. Dr. Ece Özkan Elsen
+Description: Previous work has shown that machine learning models tend to underperform when applied to children. This often occurs because training data consists mainly of adults and therefore underrepresents the physiology of children, leading to higher error rates in this subgroup. A potential indicator for poor performance is uncertainty quantification (UQ). However, UQ must satisfy a crucial property: calibration. This means that high uncertainty should correspond to a high probability of error, and low uncertainty to a low probability of error. Moreover, this calibration property must hold across all subgroups (e.g., children and adults) to ensure reliability. In this project, we aim to demonstrate, using ejection fraction prediction from echocardiography, first, that existing uncertainty estimates fail to properly indicate underperformance in children, and second, how this miscalibration can be corrected while providing mathematical guarantees.
+List of collaborators: University of Basel
+
+- work on neonates
+
+
+
+## Next steps
+
+
+
+# 04.12.2025
+## Work 
+- make slides 
+
+- rebuttal
+
+- neonate extensions
+
+- for rebuttal
+    - [x] set up the sftp wizzard in vscode (copy stuff from my working machine)
+    - [x] write new datalaoder for big trainging 
+        - [x] skm-tea
+        - [x] CINE 
+    - [x] write new training script (expXXX)
+        - [x] skmtea
+        - [x] cine
+
+    - training on all acc factors at the same time
+        - [x] write dataloader for training on all acc. factors at the same time
+            - should be very similar to original dataloader
+            - but instead of one list of files for one acc factor there should be a big list of files with all acc. factors at the same time
+            - OR we randomly sample acc. factor in the get_item function
+            - both, for cine and skmtea
+        - [x] write evaluation
+            - instead of saving the reconstructions, the evaluation should be done online
+            - this means:
+                1. perform reconstruction -> compute ssim and psnr -> add it to list
+                2. compute segmentation (no need for re-training) -> compute dice -> add it to list
+                3. compute average scores for the acceleration factor
+            - do this on a basis for one acc. factor, all in parallel 
+            - the two datasets in parallel 
+            - should be 16 (2x8) evaluation scripts running at the same time
+    - [ ] evaluate on skm
+    - [ ] evaluate on cine
+
+
+- echonet project
+
+## Next steps
+
+
+# 05.12.2025
+## Work 
+- run trainings on neonates
+    - [x] check out tensorboard 
+    - [x] make experiment files 
+        - [x] adults
+        - [x] children 
+        - [x] both
+    - [x] let trainings run for one day I guess
+
+
+
+
+- neonates
+    - [ ] make new tables 
+    - [ ] find ways of making predictions with KP
+        - [ ] check out my mapping 
+        - [ ] could also compute pre-risk
+        - [ ] compare with our method
+    - [ ] check out new datasets
+
+- defense
+    - make slides for 
+
+## Next steps
+- week goals 
+    - [ ] have first draft of my defense (MUST)
+    - [x] have trainings running (MUST)
+    - [ ] rebuttal (MUST)
+        - cannot finish since the cluster is down
+    - [ ] neonates new setup (MUST)
+    - [x] Appointment for my defense (MUST)
+    - [ ] Collect information for grant application
+    - [ ] have an implementation that runs for the VIDS framework that runs at least
 - [ ] set up U-Net framework for network configuration
     - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
 

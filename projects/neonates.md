@@ -275,17 +275,62 @@
 ## New TODOs
 - [x] text Sabrina about update 
 - [x] ask Sabrina about CRP and Leucocyte measures for mother 
-- [ ] include birth mode into analysis
+- [x] include birth mode into analysis
     - everything with C-section should be 1
     - the rest 0
-- [ ] include capilary time (make it one-hot encoding)
-- [ ] in Alg 2: exclude IL6
-- [ ] check why in Alg 2 there are so many missing values for e.g. CRP
+- [x] include capilary time (make it one-hot encoding)
+- [x] in Alg 2: exclude IL6
+- [x] check why in Alg 2 there are so many missing values for e.g. CRP
     - we can check the labels for those that are missing. Should be clear "no infection" label for them
     - also check the hours after t_0 for the subjects without measurements
-- [ ] make another algorithm version that doesn't contain IL6 (measuring IL6 is expensive!), especially for Algorithm 1
-- [ ] include column "antibiotics therapy" as feature in algorithm 1
+- [x] make another algorithm version that doesn't contain IL6 (measuring IL6 is expensive!), especially for Algorithm 1
+- [x] include column "antibiotics therapy" as feature in algorithm 1
 
 - [ ] find a way of how to compare against Kaiser-permanente 
     - can create maximum and minimum values for likelihood (basically like an uncertainty band)
     - can use the uncertainty band to then see whether we are still better
+- [ ] check out how to merge the two new/old datasets with the current one that Sven has sent
+
+
+# 01.12.2025
+## Work done
+- make classification with capillary time (binary) and birth mode (binary)
+    - for birth_mode: vaginal -> 0, c-section -> 1
+    - capillary time: >= 2: pathological (1), else normal (0)
+
+- make classification with new features
+    - classification improves significantly once we take information of 
+
+- analysis of missing values for algorithm 2
+    - 102 missing CRP
+    - 82 no infection, 20 infection
+    - only one measurement (baseline): 77
+    - another measurement but < 18 hours: 7
+    - measurements after 60 hours: 17 (e.g. Labtime 1: 30.09 and Labtime 2: 25.10.)
+
+
+# 03.12.2025
+## Work done 
+- compute confidence intervals via bootstrapping 
+
+- adjust optimization by including validation set + make model selection based on CV
+
+- check out KP approach: 
+    - determine antibiotics treatment according to: 
+
+    - extract the relevant data from my patients as follows
+        - incidence rate: look up, constant for us
+        - gestational days: gest_days
+        - gestational weeks: gest_weeks
+        - maternal temp: not available for us
+            - if fever_sub_partu=1, then use [37.5-39]
+            - if fever_sub_partu=0, use [35-37.4]
+        - gbs status: b_streptococcus (if NaN then unknown)
+        - antibiotics: not available
+            - if antibiotics_prepartal=1, do all three of them 
+            - if antibiotics_prepartal=0, then none
+            - if NaN then No antibiotics
+    
+    - one important missing aspect: 
+        - for final recommendation in EOS, we need a clinical status (well-appearing, equivocal, clinical illness)
+        - not straight forward to derive this from the values we have
