@@ -91,5 +91,6 @@
 - [x] write Uni Basel IT support 
 - [ ] potential Journals to submit Neonates paper
     - Frontiers in pediatrics or Journal of Pediatrics
+- [ ] talk to Beat and Florentin about internal wiki
 
 ## Questions for next meeting 

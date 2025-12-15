@@ -286,10 +286,7 @@
 - [x] make another algorithm version that doesn't contain IL6 (measuring IL6 is expensive!), especially for Algorithm 1
 - [x] include column "antibiotics therapy" as feature in algorithm 1
 
-- [ ] find a way of how to compare against Kaiser-permanente 
-    - can create maximum and minimum values for likelihood (basically like an uncertainty band)
-    - can use the uncertainty band to then see whether we are still better
-- [ ] check out how to merge the two new/old datasets with the current one that Sven has sent
+
 
 
 # 01.12.2025
@@ -324,7 +321,7 @@
         - gestational weeks: gest_weeks
         - maternal temp: not available for us
             - if fever_sub_partu=1, then use [37.5-39]
-            - if fever_sub_partu=0, use [35-37.4]
+            - if fever_sub_partu=0 or NaN, use [35-37.4]
         - gbs status: b_streptococcus (if NaN then unknown)
         - antibiotics: not available
             - if antibiotics_prepartal=1, do all three of them 
@@ -334,3 +331,34 @@
     - one important missing aspect: 
         - for final recommendation in EOS, we need a clinical status (well-appearing, equivocal, clinical illness)
         - not straight forward to derive this from the values we have
+
+
+# 11.12.2025
+## Work 
+- implementing first the KP uncertainty intervals
+    - needed for KP classification 
+
+
+
+## Open TODOs
+- [x] find a way of how to compare against Kaiser-permanente 
+    - can create maximum and minimum values for likelihood (basically like an uncertainty band)
+    - can use the uncertainty band to then see whether we are still better
+- [ ] check out how to merge the two new/old datasets with the current one that Sven has sent
+
+
+# 15.12.2025: Meeting 
+## General meeting notes 
+
+
+## New TODOs
+- [x] send Sabrina the presentation + list of subjects with missing values within 18-60 hours
+- [ ] make the over-treatment analysis with algorithm 1 as well and the combination of algorithm 1 and 2
+- [ ] for Sabrina: 
+    - check out Subjects with missing CRP
+    - Sabrina/Sven: check out data for Temperature and type of antibiotics
+
+- [ ] check out how "clinical status" is defined in the original paper
+- [ ] check out performance on external datasets that sven has sent
+- [ ] read EOS paper 
+- [ ] read Sabrinas paper

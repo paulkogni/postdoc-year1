@@ -51,3 +51,26 @@
 - [x] oediatric CT seg
 - [x] echonet
 - [x] echonet pediatrics
+
+
+# 11.12.2025
+## Work 
+
+
+## TODOs
+- [ ] evaluate normal U-Nets on sub-age groups
+    - [0-1[: baby
+    - [1-3[: toddler
+    - [3-5[: preschool
+    - [5-12[: gradeschool
+    - [12-18[: teens
+
+- [ ] read the paper actually and see what they have done
+- [ ] implement VIDS 
+    - my implementation 
+    - convert Yulis implementation
+- [ ] implement MC Dropout for comparison 
+- [ ] Baselines to use: 
+    - medSAM
+    - U-Net 
+    - 

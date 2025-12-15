@@ -945,14 +945,81 @@ List of collaborators: University of Basel
 
 ## Next steps
 - week goals 
-    - [ ] have first draft of my defense (MUST)
     - [x] have trainings running (MUST)
-    - [ ] rebuttal (MUST)
-        - cannot finish since the cluster is down
-    - [ ] neonates new setup (MUST)
+    - [x] neonates new setup (MUST)
     - [x] Appointment for my defense (MUST)
+    
+
+
+# 09.12.2025
+## Work 
+- scholarone: 1Aes2oxxx.de
+
+- goals today 
+    - [x] finish neonate presentation + experiments on Kaiser Permanente
+    - [x] evaluate my experiments on echonet pediatric
+    - [ ] rebuttal evaluation
+
+- neonates
+    - adapt presentation with new results
+    - make KP experiments
+    - try to unify with new data
+
+- meeting Christian (thesis)
+    - [ ] adapt bnn chapter with formulations
+
+
+- first results (dice) for normal U-Net on echonet dyn and ped (mean and std)
+    - dyn -> dyn: 0.9249 ± 0.0382 
+    - dyn -> ped: 0.8703 ± 0.0954
+    - ped -> ped: 0.9090 ± 0.0529
+    - dyn + ped -> ped: 0.8821 ± 0.0731
+
+## Next steps
+
+
+
+# 11.12.2025
+## Work 
+- defense organization
+
+- rebuttal evaluation experiments
+
+- ped unc. 
+
+- neonates
+
+
+## Next steps
+- week goals
+    - [x] fix appointment for defense + invitation
+    - [x] evaluate first experiments on ped unc
+
+
+- [ ] set up U-Net framework for network configuration
+    - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
+
+- [ ] prepare application for funding 
+    - https://www.unibas.ch/en/Research/Individual-Funding/Research-Fund.html
+    - deadline: 01.02.2026
+
+
+# 15.12.2025
+## Work 
+- neonates 
+    - [x] check out presentation
+    - [x] implement KP version for one patient 
+
+## Next steps
+- week goals
+    - [ ] finish defense!! 
+    - [ ] finish rebuttal
+    - [ ] train VIDS on toy data + make segmentation version out of it
     - [ ] Collect information for grant application
-    - [ ] have an implementation that runs for the VIDS framework that runs at least
+    - [ ] have an implementation that runs for the VIDS framework that runs at least + have BNN for comparison
+    - [ ] review paper for TMI
+
+
 - [ ] set up U-Net framework for network configuration
     - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
 

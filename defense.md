@@ -233,78 +233,11 @@
 
 
 
-
-
-
-
-
-
-## The need + challenges for ML in medicine
-- what I want to say with this slide
-    - why ML in medicine is relevant and what challenges we have when using it
-
-- content
-    - more need for computational tools (aging population, shortage of specialists)
-    - more and more ML tools are fda-approved. In order to actually use them: trust
-    - high-risk domain and need to address issues of trustworthiness, reliability, interpretability etc.
-- figures
-    - FDA approvals 
-
-
-## Origins of uncertainty in medicine
-- what I want to say with this slide
-    - medical diagnosis is by its nature full of uncertainty
-
-- content
-    - uncertainty in acquisition (motion during scan)
-    - varying/ambiguous human physiology (fuzzy tumor boundaries)
-    - uncertainty from different levels of expertise 
-    - lot's of research has been done on that already
-- figures
-    - something that visualizes origins of uncertainty
-
-
-## The special case: diagnostic pipelines (away from isolated tasks)
-- what I want to say with this slide
-    - how uncertainty affects the whole diagnostic pipeline and not only isolated tasks
-
-- content
-    - example of an actual pipeline (MICCAI 23)
-    - show how uncertainties are embedded within pipeline 
-    - affect eventually decisions
-
-- figures
-    - dinggeng screenshot
-
-
-## Uncertainty for clinical decisions
-- what I want to say with this slide
-    - how we have to treat uncertainty such that it can be used to form decisions in diagnostic pipelines
-
-- content
-    - need to know how to pass on uncertainty, ensure that it is meaningful and eventually know what to do with it
-
-- figures
-    - not sure yet, maybe combine this slide with previous one
-
-
-## Contribution of this thesis
-- what I want to say with this slide
-    - establish the research gap and how I plan to fill it 
-
-- content
-    - my contributions are propagation + importance of evaluation
-    - how to effectively laverage propagated uncertainty
-    - calibrate with statistical guarantees  
-    - how to bring everything together to make clinical decisions
-
-- figures
-    - overview of maybe propagation, calibration and decision
-
-
-# Paper contribution slides 
-
-
-
-
-# Conclusion and outlook slides
+# General questions and things to look up
+- [ ] current SOTA UQ in ML + in medicine
+- [ ] realted propagation methods + how they work 
+    - feiner
+    - raghav
+    - the old methods (fitting gaussians etc.)
+- [ ] diffusion models 
+- [ ] 2d vs 3d predictions
