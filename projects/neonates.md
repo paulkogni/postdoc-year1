@@ -354,7 +354,7 @@
 ## New TODOs
 - [x] send Sabrina the presentation + list of subjects with missing values within 18-60 hours
 - [ ] make the over-treatment analysis with algorithm 1 as well and the combination of algorithm 1 and 2
-- [ ] for Sabrina: 
+- [x] for Sabrina: 
     - check out Subjects with missing CRP
     - Sabrina/Sven: check out data for Temperature and type of antibiotics
 
@@ -362,3 +362,63 @@
 - [ ] check out performance on external datasets that sven has sent
 - [ ] read EOS paper 
 - [ ] read Sabrinas paper
+
+
+# GNPI Abstract
+- my part: methods and results
+- language: german
+- additional evaluation on external datasets
+- report classification accuracy 
+- optional: over-treatment reduction analysis
+
+- my next todos
+    - [ ] combine new datasets into unified version 
+    - [ ] evaluate the metrics from above
+    - [ ] maybe characterize main dataset
+
+
+# Draft: Methoden und Ergebnisse
+- Materialien und Methoden
+    - 296 Neugeborene mit Verdacht auf Infektion
+    - Gewicht: 
+    - Gestationsalter >= 34 Wochen (keine Fruehchen)
+    - Diagnose Infektion: nach AWMF 024 – 008
+    - maschinelles Lernen (XGBoost) fuer Frueherkennung von Infektion bei Neugeborenen 
+    - Vorhersagen aufgrund von klinischen Parametern und Biomarker-Werten (IL6, CRP, WBC)
+    - Die Kohorte wurde aufgeteilt in ein Trainingsdatensatz, Validierungsdatensatz und ein Testdatensatz in einem Verhaeltnis von 0.7/0.15/0.15
+        - in absoluten Zahlen: 207 Train IDs, 44 Validation IDs, 45 Test IDs
+    - Zur Algorithmusoptimierung wurden nur Trainings- und Validierungsdatensatz verwendet
+    - Testdatensatz wurde nur zur finalen Auswertung benutzt, damit kein bias 
+    - zusaetzlich wurde die Methode auf einem unabhaenigen Datensatz ausgewertet, um die Generalisierbarkeit auszuwerten
+        - auf insgesamt 360 weiteren Kindern (ohne re-training)
+    - zur zusaetzlichen Erklaerbaerkeit Analyse von Shapley Values (Auswertung von Bedeutung der Wichtigkeit zur Klassifizierung der jeweiligen Variablen)
+
+- Ergebnisse
+    - Klassifizierungserfolg gemessen durch AUC
+    - Performance auf dem Testdatensatz: 
+        - klinische Parameter + Biomarker: 0.9228 ± 0.0437 
+        - nur Biomarker: 0.9106 ± 0.0506
+        - nur klinische Parameter: 0.6776 ± 0.0866
+    - Performance auf dem unabaenigen Datensatz: 
+        - klinische Parameter + Biomarker: 0.8293 ± 0.0253 
+        - nur Biomarker: 0.7789 ± 0.0293
+        - nur klinische Parameter: 0.6629 ± 0.0332
+    - Frueherkennung gut moeglich 
+    - ebenfalls getestet: ob man biomarker weglassen kann -> leider nicht, da Diagnose ohne Biomarker signifikante einbussen bei Diagnose zeigt
+    - am besten: Kombination von klinischen Parametern und Biomarkerwerten
+    - SHAP-values um zu analysieren, welche features am wichtigsten zur Klassifizierung sind: 
+        - top 5 sind (absteigend) IL6, CRP, Gestationsdauer, Stauerstoffbedarf und Base excess
+
+Titel: Machine-Learning-basierte Integration von Biomarkern und klinischen Parametern zur optimierten Risikostratifizierung der neonatalen Sepsis
+
+Hintergrund:
+Die neonatale Sepsis zählt weiterhin zu den größten Herausforderungen in der Versorgung von Neugeborenen. Aufgrund unspezifischer Frühzeichen und der potenziell gravierenden Folgen eines Therapieverzugs werden Diagnostik und insbesondere Antibiotikatherapien häufig bereits im Verdachtsfall eingeleitet – mit relevantem Overtreatment und teils unnötiger Antibiotikaexposition. Bereits etablierte Risikostratifizierungsmodelle stützen sich vor allem auf klinische und perinatale anamnestische Parameter, bilden jedoch die biomarkerbasierte Entzündungsdynamik nur unzureichend ab. Biomarker wie IL-6 und CRP sind in der klinischen Routine etabliert und könnten die Vorhersagegenauigkeit wesentlich verbessern, werden in bestehenden Entscheidungsmodellen jedoch nicht systematisch integriert. Die vorliegende Studie zielt darauf ab, klinisch-anamnestische Daten und etablierte Biomarker mithilfe von Machine-Learning-Methoden auf Basis großer, bereits vorhandener Datensätze in einem Algorithmus zu integrieren, um Sepsisrisiken präziser zu quantifizieren, Diagnostik zielgerichteter zu steuern und unnötige Antibiotikatherapien zu reduzieren.
+
+Methoden:
+In diese Studie wurden 296 Neugeborene mit einem Gestationsalter von ≥ 34 Wochen eingeschlossen, bei denen der Verdacht auf eine Infektion bestand. Die Diagnosebestätigung erfolgte gemäß der AWMF-Leitlinie 024–008. Zur Früherkennung der Infektion wurde ein XGBoost-Algorithmus (Machine Learning) trainiert, der klinische Parameter sowie Biomarker (IL-6, CRP) integriert. Die Gesamtkohorte wurde im Verhältnis 0,7/0,15/0,15 in Trainings- (n=207), Validierungs- (n=44) und Testdatensätze (n=45) unterteilt. Zur Vermeidung von Bias erfolgten Training und Optimierung ausschließlich auf dem Trainings- und Validierungsdatensatz, während der Testdatensatz nur zur finalen Auswertung herangezogen wurde. Zur Überprüfung der Generalisierbarkeit wurde das Modell zusätzlich ohne Nachtraining an einem unabhängigen externen Datensatz von 360 Kindern validiert. Die Interpretierbarkeit des Modells und die Gewichtung der einzelnen Variablen wurden mittels SHAP-Values (Shapley Additive Explanations) analysiert.
+
+Ergebnisse:
+Die Vorhersagegüte wurde mittels Area Under the Curve (AUC) bewertet. Auf dem internen Testdatensatz zeigte die Kombination aus klinischen Parametern und Biomarkern die höchste Genauigkeit (AUC 0,92 ± 0,04), gefolgt von der alleinigen Nutzung von Biomarkern (AUC 0,91 ± 0,05). Modelle, die ausschließlich auf klinischen Parametern basierten, zeigten signifikante Einbußen in der Diagnosegüte (AUC 0,68 ± 0,09). Diese Ergebnisse bestätigten sich in der unabhängigen Validierungskohorte: Auch hier war der kombinierte Ansatz (AUC 0,83 ± 0,03) dem reinen Biomarker-Modell (AUC 0,78 ± 0,03) und dem rein klinischen Modell (AUC 0,66 ± 0,03) überlegen. Die Analyse verdeutlichte, dass ein Verzicht auf Biomarker die diagnostische Präzision signifikant mindert. Die SHAP-Analyse identifizierte als die fünf wichtigsten Prädiktoren für die Klassifizierung (in absteigender Relevanz): IL-6, CRP, Gestationsalter, Sauerstoffbedarf und Base Excess.
+
+Schlussfolgerung:
+Die ML-basierte Kombination von Klinik/Anamnese und Biomarkern könnte eine präzisere Sepsis-Risikostratifizierung ermöglichen und damit unnötige Antibiotikatherapien reduzieren. Vor einer routinemäßigen klinischen Anwendung soll der Algorithmus prospektiv validiert und im direkten Vergleich mit etablierten Risikobewertungstools evaluiert werden.

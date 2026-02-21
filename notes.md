@@ -1010,19 +1010,488 @@ List of collaborators: University of Basel
     - [x] check out presentation
     - [x] implement KP version for one patient 
 
+- [ ] write welcome
+
+- my project
+
+
+## Next steps
+
+
+
+# 16.12.2025
+## Work 
+- TODOs today
+    - [x] make slides 
+    - [x] finish rebuttal eval (for the cine data)
+    - [x] try to reproduce tensorflow code from yuli + try to fix mine
+    - [x] UT VPN aufsetzen
+        - only works from Tübingen directly
+
+- slides 
+
+- rebuttal final eval for cine 
+
+## Next steps
+
+
+# 17.12.2025
+## Work 
+- rebuttal 
+    - [x] try to evaluate cine still
+    - write rebuttal 
+        - [x] adjust cover letter 
+        - [ ] adjust responses
+        - [ ] adjust the paper itself
+
+- TODOs today 
+    - [x] finish rebuttal eval
+        - [ ] check whether there is in the eval of CINE something that I might have missed (looks too high for now)
+    - [x] have running implementation of VIDS
+    - [ ] have first version of segm VIDS
+
+- for VIDS (TODOs)
+    - I have a working implementation that works but not consistently
+    - check first whether I maybe need to pretrain the g network
+    - compare the two implementations (Yuli and mine)
+    - ask chatti whether he knows about behavior
+
+
+## Next steps
+
+
+
+
+# 18.12.2025
+## Work 
+- defense
+    - [ ] make slide per each topic (n slides should be done)
+    - [ ] collect all the necessary figures that I already have
+    - [ ] make a plan of which figures I still would like to have / have to create
+    - [ ] make notes on what I wanna say where
+
 ## Next steps
 - week goals
-    - [ ] finish defense!! 
-    - [ ] finish rebuttal
-    - [ ] train VIDS on toy data + make segmentation version out of it
-    - [ ] Collect information for grant application
-    - [ ] have an implementation that runs for the VIDS framework that runs at least + have BNN for comparison
-    - [ ] review paper for TMI
+    - [x] finish defense!! 
+    - [x] Collect information for grant application
+    - [x] review paper for TMI
 
 
-- [ ] set up U-Net framework for network configuration
-    - https://towardsai.net/p/l/how-i-use-nnunet-for-medical-image-segmentation-a-comprehensive-guide
+- [x] review for MELBA
+    - https://app.scholasticahq.com/journals/melba/manuscripts/2880633/v1
 
+# 26.01.2026
+## Work 
+- rebuttal 
+
+- neonates classification
+
+
+### Rebuttal plan 
+- new experiments for reviewer #1
+    - add an additional model that was trained on all acc. factors simultaneously and compare it against all other showed models 
+        - will be additional two lines in Figure 2 (one for SKM-TEA and one for CINE)
+        - we will compare only reconstruction and segmentation performance and show with this how using this approach is not necessary and using one model per acc. factor increases performance over-all 
+    - Data consistency 
+        - I wouldn't like to re-do all the experiments, especially since in this framework data consistency is not easily integrateable and I don't even know whether differentiable by default (due to sampling - replacement mismatches)
+        - also I tried it out in the past to insert a simple DC layer and it was absolutely not straight forward and didn't really work
+    - computation with diffusion model, one forward pass for time comparison to justify the choice of model
+        - but also explain why it doesn't matter too much because of modularity 
+        - maybe Nikolas has numbers from his papers for SKM-TEA that we could use to back it up
+
+- For reviewer #2
+    - no additional experiments
+
+    
+- write differently:
+    - maybe justification of the models and methods more detailed 
+    - more detailed explanation for our pipeline approach instead of end-to-end 
+    - reviewer #1 asked for a more detailed explanation on the calibration procedure but I don't really know how to address this (maybe code release is enough?)
+    - Further clarify why we used a pipeline approach and not end-to-end
+    
+
+## Next steps
+- [x] finish rebuttal
+
+
+
+# 02.02.2026
+## Work 
+- take care of my certificate procedure
+- admin stuff
+
+- MICCAI paper plan
+    - abstract deadline: 12.02.2025
+    - experiments to do: 
+        1. Baseline Experiments on Echonet for 
+            - metrics: dice and error for EF
+            - standard U-Net
+            - maybe phiseg
+            - ensembles 
+        2. Set up VIDS properly 
+        3. Extend VIDS to Segmentation once it works + is validated
+        4. Perform VIDS training with bigger backbone (maybe the U-Net) and check performance
+        5. Evaluate uncertainties
+            - uncertainty calibraton for EF
+            - calibration for ensembles 
+            - calibration for VIDS
+            - interval sizes for both
+            - fixing interval sizes with subgroup calibration of RCPS
+    
+    - trainings TODO
+        - [ ] train ensembles of U-Nets 
+        - ( [ ] train phiseg)
+        - [ ] train VIDS
+    - evaluations (all for different age groups)
+        - [ ] performance in dice
+        - [ ] performance in error 
+        - [ ] coverage for all three models (before calibration)
+        - [ ] coverage for all three models after calibration
+        - [ ] interval size analysis for all three methods
+
+
+## Next steps
+
+
+
+
+
+# 04.02.2026 
+## Work 
+- goals today
+    - [x] have ensembles ready and phiseg training 
+    - [x] have working version of VIDS 
+    - [x] prepare meeting with Sabrina 
+    - [x] prepare thesis documents
+
+- implement trainings for standart UQ methods (ensembles and phiseg)
+
+
+
+
+
+## Next steps
+- [x] train ensembles 
+    - [x] only children
+    - [x] only adults 
+    - [x] both
+
+
+
+# 05.02.2025
+## Work 
+- [x] goals today 
+    - [x] have final ensembles training 
+    - [x] have phiseg training 
+    - [x] meeting with Emma
+
+
+
+
+## Next steps
+
+
+# 06.02.2026
+## Work 
+- TODOs today
+    - [x] adjust revision
+    - [ ] adjust my thesis 
+    - [ ] check my results for segmentation
+
+- revision
+    - [x] check changes 
+    - [x] incorporate comments
+        - [x] say where we added the pipeline justification 
+            - removed it
+        - [x] say specific time for acquisition in the beginning already
+ 
+
+## Next steps
+- [x] train phiseg
+    - [x] only children 
+    - [x] only adults 
+    - [x] both
+
+
+
+# 09.02.2026
+## Work 
+- meeting Suliman 
+    - fastest data transfer would be through 
+    - for this, we need to do a data management plan 
+    - deadline: Friday 
+
+
+- TODOs today
+
+- Week goals
+    - [ ] MEDIA 
+    - [ ] thesis done
+    - [ ] MICCAI abstract and intermediate results
+    - [ ] DMP
+
+
+
+
+
+
+## Next steps
+
+
+# 10.02.2025
+## Work 
+- work today 
+    - [x] prepare meetings 
+    - [x] media submission 
+    - [x] data management plan
+    - [x] check with Ece about 1 on 1
+    - [x] check my results from the trainings
+
+- meeting with Sabrina 
+    - Sabrina only until end of february there
+    - next meeting with Sven
+    - calprotectin will be finished 
+    - I will probably write the paper
+    - What I want to try: tabular foundation model
+    - for the garmin study
+        - Sabrina sends some sample data for one patient and I can have a look into that 
+        - ask Dani and Julius about their experience 
+
+- media submission 
+    - [x] check out why it doesn't work 
+    - [x] upload the files accordingly
+
+### What to change in my thesis 
+- [x] adjust forward operator formula for MRI
+- [x] adjust titles of bayesian NNs and Generative models 
+- [x] include Feiner in the background chapter
+
+
+### Data management plan
+- admin 
+    - Title: Development of a Multi-Modal Pediatric Ultrasound Foundation Model (PUSFM)
+    - Principal Investigator (PI): Ece Özkan Elsen
+    - Data Controller: Data Science Group led by Dr. Soheila Aghlmandi (Paediatric Research Centre, UKBB)
+    - Data Processor: Prof. Dr. Ece Özkan Elsen, University of Basel
+    - Date: 10.02.2026
+
+- data description
+    - Data Source: Ultrasound images at PACS in USB, clinical data from the Clinical Data Warehouse (CDWH) at UKBB
+    - Data types: 
+        - ultrasound images (DICOM) with diagnosis
+        - clinical data: tabular (csv)
+    - Retrospective pediatric ultrasound examinations conducted between 01.01.2020 and 31.12.2024
+    - Volume: 14644 Patients (7-8TB of data)
+
+- Legal and ethical compliance 
+    - ethics approval, Basec Nr. 2025-01777
+
+- Data processing workflow
+    - On-Site extraction (who, that critical data never leaves the hospital)
+        - Extract raw dicom images from the PACS server at USB 
+    - Raw data handling
+        - raw data can be processed two ways: 
+            1. store the data on an encrypted hard drive disk (preferred solution)
+                - can be made immediately, i.e. does not need any additional structural changes
+                - will be encrypted, only Suliman Bouizaguen has access to key and the disk 
+                - in case gets lost still no data access
+                - can be either physically attached to a device at USB or access USB computer and transfer to hard drive via SFTP
+            2. Data Science secured server (does not exist yet, less preferred)
+                - can be used to securely transfer data to compute center of UKBB 
+                - this is planned but there is no infrastructure yet and can take several months
+    - Pseudonymization 
+        - to ensure pseudonymization the IDs of images and clinical data will be hashed (jointly), and the dates will be shifted randomly
+
+    - Data transfer 
+        - data will be exported from PACS to USB machine, then on a hard drive and this to  UKBB
+        - after processing (Pseudonymization) at UKBB the data will be transfered to a sciCORE+ entity according to BiomedIT standards (encrypted SFTP)
+
+    
+    - Data storage (during research)
+        - securely on sciCORE+ server (no internet access) during research project, maximum of 5 years
+    - Data archiving 
+        - on encrypted hard drive 
+
+    
+
+### Changelog for my thesis: 
+- section 2.2 use MFS instead of MF and add citations
+- changed titles for 2.3.1 and 2.3.2
+    - Bayesian Approximation Methods -> Bayesian Neural Networks for Epistemic Uncertainty
+    - Generative Modeling with Conditional VAEs -> Conditional VAEs for Aleatoric Uncertainty
+- included Feiner as reference for Monte Carlo Sampling in 2.3.4
+    
+
+
+# 11.02.2026
+## Work 
+- TODOs today
+    - [x] check training results on scicore
+    - [x] if good, implement VIDS, maybe with claude
+    
+
+- meeting topics Ece
+    - admin 
+        - no bill/mail yet
+        - plants meh, we are on it
+        - couldn't do application for grant anymore because I didn't have entry in portal -> next round in august
+        - is your new SNF grant affected by new rule? 
+    - Project neonates
+        - abstract submitted (first author, you second last; not paper yet)
+        - preparing paper; want to use Tabular foundation model as extension to see whether we are better
+    - Project UKBB
+        - problematic data transfer (not so much space)
+            - fast solution: copy from PACS on HDD 
+            - slow solution: get compute infrastructure
+        - they are having meeting soon with data access committee
+        - we are trying to get fast solution done
+    - Project unfair uncertainties
+        - preparing MICCAI submission (intend to submit submitted but we will see how far I will come)
+        - preliminary results fine but needs more eval
+    - Project KISPI?
+    - Project hip us
+        - can prepare a draft, maybe meet with them? 
+
+- check training results
+    - phiseg results look good in general though
+
+- re-implement VIDS
+    - [x] check my last implementation 
+    - [x] check with claude
+        - [x] pure implementation from scratch from paper 
+        - [x] check Yulis implementation with paper 
+        - [x] check with my implementation with paper 
+        - [x] compare my implementation with Yulis implementation
+
+
+
+
+## Next steps
+
+
+# 12.02.2026
+## Work 
+- TODOs today
+    - [x] extend VIDS to segmentation
+    - [ ] make a plan on evaluation of experiments
+    - [ ] make a first draft of the abstract + intent to submit
+    - [ ] meeting slides Ece
+
+
+### MICCAI abstract
+- Title: Creating fair uncertainties for pediatric ultrasound images
+- background
+    - ML application for pediatrics observes often underperformance compared to applications for adults (reasons: less data available, data more heterogen)
+    - high performance variability even among children due to heterogenity
+    - crucial to have indication on when model underperforms
+    - one possible indicator: use uncertainty quantification 
+- gap in knowledge: 
+    - no guarantee that plain uncertainty from NNs have property that high uncertainty means high error probability
+    - even frequentist calibration methods that turn uncertainties into ones with statistical guarantees don't necessarily give good uncertainties for individual cases
+    - this eventually could lead to unfair downstream decisions
+- approach + findings
+    - we first show that for common UQ methods the provided uncertainties don't give useful uncertainties in subgroups of children 
+    - we provide a new method called VIDSeg that extends variational inference for distribution shifts to segmentation + combine it with conformal prediction on downstream metrics (ejection fraction) to obtain high-quality uncertainty estimates that show better correlation with error and come with statistical guarantees
+    - uncertainty intervals even better quality than when combining other established UQ models with conformal
+- this allows us for safer using uncertainty intervals for decision making when using ML in pediatric applications and therefore improves trustworthiness
+
+
+## Next steps
+
+
+
+# 13.02.2026
+## Work 
+- TODOs today 
+    - [x] make slides Ece
+    - [x] copy vids for segmentation to scicore + let it run
+    - [x] make miccai paper schlachtplan
+
+## Next steps
+- week goals
+    - [x] data management plan
+    - [x] adjust and submit my thesis
+    - [x] send graduation office my Deckblatt and change approval
+    - [x] write and submit abstract MICCAI
+    - [x] have running version of VIDS
+    - [ ] have evaluation pipeline MICCAI paper
+    - [ ] write down paper plan
+
+- [x] have an implementation that runs for the VIDS framework that runs at least + have BNN for comparison
+- [x] train VIDS on toy data + make segmentation version out of it
+
+
+
+
+# 17.02.2026
+## Work 
+- TOODs today
+    - [x] vids should be running in the morning 
+    - [x] evaluation plan is there + make template for functions
+    - [x] start a draft 
+
+### Schlachtplan
+- VIDS segm running
+- have explicit evaluation plan for the paper
+- make draft in bullet points
+- finalize the paper
+
+## Next steps
+
+
+
+
+# 18.02.2026
+## Work 
+- TODOs today
+    - [x] make parameter search for VIDS
+    - [x] write evaluation code for phiseg and ensembles (ready csv + plots)
+    - [x] write notes on method
+
+
+- random project ideas
+    - uncertainty attention in networks
+    - extending Simons architecture by making uncertainty sets on ICD-10 codes
+    - make uncertainty predictions with sidekick models
+    - uncertainty quantification in world models
+
+
+## Next steps
+- from meeting with Ece
+    - [x] Talk with THomas and David about project and maybe meet up with them
+
+
+# 19.02.2026
+## Work 
+- todos today
+    - [x] finish base evaluations for my methods 
+    - [x] have preliminary results
+
+
+## Next steps
+- [x] finish base evaluation
+
+
+
+# 21.02.2026
+## Work 
+- TODOs today 
+    - [x] finish VIDS evaluation 
+        - check the best loss model but also iterate over other params
+    - [ ] create calibration set (from val set)
+    - [ ] make calibration 
+    - [ ] have a first draft 
+    - [ ] make remaining trainings for all and kids
+
+
+
+## Next steps
+- [ ] write paper draft
+- [ ] create plots 
+- [ ] make figure for my method 
+- [ ] also try maybe some more hyperparameters for fun (especially test env size)
+- [ ] check Ece's proposal
 - [ ] prepare application for funding 
     - https://www.unibas.ch/en/Research/Individual-Funding/Research-Fund.html
-    - deadline: 01.02.2026
+    - deadline entry tool: 15.08.2026
+    - deadline submission: 01.09.2026

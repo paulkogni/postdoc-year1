@@ -241,3 +241,68 @@
     - the old methods (fitting gaussians etc.)
 - [ ] diffusion models 
 - [ ] 2d vs 3d predictions
+
+
+
+
+
+
+
+# remaining TODOs slides
+
+- S2
+    - not so nice up to now
+    - maybe motivation of segmentation
+    - ask chatti
+- S3
+    - align spacing for decision items
+- S4
+    - re-position texts
+    - make math formulas
+- S5 
+    - make difference between brains bigger
+    - math formulas 
+    - last arrow spacing 
+- s6
+    - re-position text
+- s7 
+    - animations
+- s8
+    - animations
+    - include segmentation example
+- s9
+    - adjust figure sizes
+    - text position
+- s10
+    - write core idea
+    - maybe include methods used
+- s11
+    - make higher-res screenshot of results table
+    - include main takeaway 
+- s12
+    - re-position figures and text
+- s13
+    - write info on rcps (motiv + how it works)
+    - math formulas
+- s14
+    - adjust animations
+    - make figures a bit bigger
+    
+- s15
+    - little text: how our approach differs from original one
+- s16
+    - text under images
+    - animations
+- s17 
+    - math formula
+    - knee volume images
+- s18
+    - text on methods used
+- s19
+    - re-position texts
+    - highlight key takeaways
+- s20
+    - write key takeaways
+    - maybe split figure into two
+- s21
+    - image of group

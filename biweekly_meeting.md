@@ -87,10 +87,44 @@
 - 
 
 ## New TODOs 
-- [ ] send Ece results of developmental performance 
+- [x] send Ece results of developmental performance 
 - [x] write Uni Basel IT support 
-- [ ] potential Journals to submit Neonates paper
+- [x] potential Journals to submit Neonates paper
     - Frontiers in pediatrics or Journal of Pediatrics
-- [ ] talk to Beat and Florentin about internal wiki
+
 
 ## Questions for next meeting 
+
+
+# 16.12.2025
+## Work 
+
+
+## New TODOs
+- [x] send Ece results adults -> adults und all -> adults
+- [x] make different evaluation by age 
+    - do not report age groups but dice for each year
+    - for this do instead of elifs a loop over all ages and save into a dataframe, maybe directly as a csv
+
+
+# 19.01.2026
+## General 
+- KISPI project
+    - ethics approved with some additional changes
+    - EKG nicht einfach extrahierbar
+
+
+## New TODOs
+- [ ] talk to Beat and Florentin about internal wiki
+- [ ] make research update next week
+- [x] write Suliman 
+    - price and time estimate for storage
+    - ask Scicore about next steps for data transfer
+- [ ] Check with beat whether we have docu sign or similar
+- [ ] LUKS
+    - prepare agreement for signing
+    - talk to pablo again for data transfer preparation (what does he need to know?)
+
+- [ ] look again into funding for postdoc position
+- [ ] software developer
+    - meet with him  

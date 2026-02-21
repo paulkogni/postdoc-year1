@@ -53,24 +53,47 @@
 - [x] echonet pediatrics
 
 
-# 11.12.2025
+# 15.12.2025
 ## Work 
+- implementation of VIDS
+    - implement my version
+    - translate Yulis version
+    - make experiments on toy data for testing
+
+- experiments on toy data 
+    - doesn't really do the same thing
+    - it fits the data nicely but the observation that the uncertainty becomes higher the more we go to the right is not correct
 
 
 ## TODOs
-- [ ] evaluate normal U-Nets on sub-age groups
+- [x] evaluate normal U-Nets on sub-age groups
     - [0-1[: baby
     - [1-3[: toddler
     - [3-5[: preschool
     - [5-12[: gradeschool
     - [12-18[: teens
 
-- [ ] read the paper actually and see what they have done
-- [ ] implement VIDS 
+
+- [x] implement VIDS 
     - my implementation 
     - convert Yulis implementation
+
+
+# 16.12.2025
+## Work 
+- validating VIDS from Yuli
+    - general trend is true that outside the distribution the variability gets higher 
+    - Yulis code is definitely not stable though; hard to reproduce figures
+
+
+
+## TODOs
+- [ ] have working VIDS implementation
+    - [ ] try mine which I haven't yet (mathematically different from Yulis code)
+    - [ ] try again to translate yulis code to pytorch
+- [ ]
+- [ ] read the paper from echonet ped and see what they have done
 - [ ] implement MC Dropout for comparison 
 - [ ] Baselines to use: 
     - medSAM
     - U-Net 
-    - 
